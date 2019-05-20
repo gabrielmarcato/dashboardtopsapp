@@ -1,0 +1,204 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../loader.gif') 50% 50% no-repeat white;
+}
+
+
+body {
+	background: var(--bg-default) !important;
+	overflow-x: hidden;
+	padding: 0;
+}
+
+:root {
+	--color-white: #FFF;
+	--color-default: #0a3061;
+  --bg-default: #eceff1;
+  --bg-check: #313131;
+  --color-dot: #bbb;
+  --color-dotActive: #717171;
+}
+
+
+/***
+**** MENU
+***/
+nav {
+	background: var(--color-default);
+}
+
+.responsive-menu {
+    display: block;
+    width: 100%;
+    color: var(--color-white);
+    text-decoration: none;
+    text-align: center;
+    font-size: 180%;
+    cursor: pointer;
+}
+.rotate{
+    -moz-transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.rotate.down{
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+.menu {
+    display: none;
+    margin-left: 15%;
+	  margin-right: 15%;
+}
+.menu ul {
+    width: 100%;
+}
+.menu li {
+    margin: 0;
+    font-weight: 600;
+    padding: 10px 40px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out 0s;
+    color: var(--color-white);
+	  cursor: pointer;
+}
+
+.check{
+  font-size: 15px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.check input {
+  opacity: 0;
+}
+
+.check span {
+  background: var(--bg-check);
+  color: var(--color-white);
+  text-align: center;
+  border: 1px solid white;
+}
+
+.check span:before{
+  content: "\f122";
+  font-family: Ionicons;
+  opacity: 0;
+  padding: 5px;
+}
+
+.check:hover > span {
+  opacity: 0.8;
+}
+
+.check input:checked ~ span:before {
+  opacity: 1;
+}
+
+
+/***
+**** CARD
+***/
+.row {
+	padding-top: 3%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.col {
+	margin-bottom: 30px;
+}
+
+.card-header {
+  background-color: var(--color-default) !important;
+	color: var(--color-white);
+	z-index: 3;
+	font-weight: bold;
+}
+.card-body {
+    margin: -20px;
+    padding: 0;
+	margin-bottom: -36px;
+	overflow: auto;
+	height: 77vh;
+	z-index: 1;
+}
+.card-body tr th {
+	font-size: 20px;
+}
+
+.card-body td {
+	line-height: 35px;
+	padding-top: 10px;
+	height: 45px;
+	font-size: 18px;
+	max-width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-btm {
+	padding-top: 5px;
+	background-color: var(--color-default);
+	color: var(--color-white);
+	font-weight: bold;
+	font-size: 25px;
+	z-index: 2;
+	height: 50px;
+}
+
+.table-success {
+	font-weight: bold;
+	width: 6%;
+}
+
+.table-danger {
+	font-weight: bold;
+	width: 6%;
+}
+
+.table-warning {
+	font-weight: bold;
+	width: 6%;
+}
+
+
+/***
+**** SLIDE
+***/
+
+.mySlides {
+  display: none;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  margin-top: -55px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--color-dot);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.active {
+  background-color: var(--color-dotActive);
+}
